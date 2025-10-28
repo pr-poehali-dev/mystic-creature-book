@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -61,7 +61,10 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				parchment: '#2a1810',
+				blood: '#8b1a1a',
+				purple: '#9b87f5'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +87,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'page-flip': {
+					'0%': { transform: 'rotateY(0deg)' },
+					'100%': { transform: 'rotateY(-180deg)' }
+				},
+				'page-flip-back': {
+					'0%': { transform: 'rotateY(-180deg)' },
+					'100%': { transform: 'rotateY(0deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'page-flip': 'page-flip 0.6s ease-in-out',
+				'page-flip-back': 'page-flip-back 0.6s ease-in-out'
 			}
 		}
 	},
